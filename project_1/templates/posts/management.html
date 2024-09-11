@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Управление полетом{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+  <form method="post">
+
+      <div class="form-group">
+          <input type="submit" value="Взлет" class="submit-btn">
+      </div>
+
+    <div class="form-group">
+        <label for="angle">Задать угол поворота:</label>
+        <input type="text" name="angle" id="angle" value="{{ request.form['angle'] }}" class="form-control">
+    </div>
+      <div class="form-group">
+          <input type="submit" value="Применить" class="submit-btn">
+      </div>
+    </form>
+
+  <form method="post">
+    <div class="form-group">
+        <label for="altitude">Задать высоту:</label>
+        <input type="text" name="altitude" id="altitude" value="{{ request.form['altitude'] }}" class="form-control">
+    </div>
+      <div class="form-group">
+          <input type="submit" value="Применить" class="submit-btn">
+      </div>
+  </form>
+
+  <form method="post">
+    <div class="form-group">
+        <label for="forward">Задать смещение вперед:</label>
+        <input type="text" name="forward" id="forward" value="{{ request.form['forward'] }}" class="form-control">
+    </div>
+      <div class="form-group">
+          <input type="submit" value="Применить" class="submit-btn">
+      </div>
+  </form>
+
+  <form method="post">
+    <div class="form-group">
+        <label for="back">Задать смещение назад:</label>
+        <input type="text" name="back" id="back" value="{{ request.form['author'] }}" class="form-control">
+    </div>
+      <div class="form-group">
+          <input type="submit" value="Применить" class="submit-btn">
+      </div>
+  </form>
+{% endblock content %}
+
